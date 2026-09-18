@@ -193,7 +193,7 @@ def transform(data_dir: Path, output_path: Path, base_uri: str) -> Graph:
             uri(base_uri, "genre", row["genre_id"]),
         ))
 
-    # transform 8. :movie_id (1368337) schema:productionCompany :company_id
+    # transform 9. :movie_id (1368337) schema:productionCompany :company_id
     for row in movie_companies:
         graph.add((
             uri(base_uri, "movie", row["movie_id"]),
@@ -201,7 +201,7 @@ def transform(data_dir: Path, output_path: Path, base_uri: str) -> Graph:
             uri(base_uri, "company", row["company_id"]),
         ))
 
-    # transform 9. similar to transforms 7 and 8
+    # transform 10. similar to transforms 8 and 9
     for row in movie_countries:
         graph.add((
             uri(base_uri, "movie", row["movie_id"]),
@@ -209,7 +209,7 @@ def transform(data_dir: Path, output_path: Path, base_uri: str) -> Graph:
             uri(base_uri, "country", row["country_code"]),
         ))
 
-    # transform 10. similar to transforms 7 and 8
+    # transform 11. similar to transforms 8 and 9
     for row in movie_languages:
         graph.add((
             uri(base_uri, "movie", row["movie_id"]),
