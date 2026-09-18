@@ -80,19 +80,13 @@ for page in PAGES:
 
 def write_csv(filename, fieldnames, rows):
     cleaned_rows = []
-    text_fields = {
-        fieldname for fieldname in fieldnames
-        if fieldname not in {"id", "movie_id", "genre_id", "company_id", "order", "vote_average", "vote_count", "runtime"}
-    }
 
     for row in rows:
         cleaned_row = dict(row)
         for fieldname in fieldnames:
             value = cleaned_row.get(fieldname)
             if isinstance(value, str):
-                cleaned_row[fieldname] = value.strip() or ("Unknown" if fieldname in text_fields else "")
-            elif value is None and fieldname in text_fields:
-                cleaned_row[fieldname] = "Unknown"
+                cleaned_row[fieldname] = value.strip()
             elif value is None:
                 cleaned_row[fieldname] = ""
         cleaned_rows.append(cleaned_row)
@@ -101,7 +95,7 @@ def write_csv(filename, fieldnames, rows):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(cleaned_rows)
-        print(f"🟢 Created: {OUT_DIR}/{filename}")
+        print(f"📍 Created: {OUT_DIR}/{filename}")
 
 
 write_csv(
