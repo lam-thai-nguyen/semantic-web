@@ -11,7 +11,7 @@ OUT_DIR = "data"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # Info retrieval
-movies = []             # id, imdb_id, original_title, title, overview, original_language, release_date, runtime, vote_average, vote_count
+movies = []             # id, imdb_id, title, overview, original_language, release_date, runtime, vote_average, vote_count
 genres = {}             # id -> name
 movie_genres = []       # movie_id, genre_id
 companies = {}          # id -> (name, origin_country)
@@ -20,8 +20,8 @@ countries = {}          # iso_3166_1 -> name
 movie_countries = []    # movie_id, iso_3166_1
 languages = {}          # iso_639_1 -> name
 movie_languages = []    # movie_id, iso_639_1
-cast_rows = []          # movie_id, person_name, character, order
-crew_rows = []          # movie_id, person_name, job
+cast_rows = []          # movie_id, person_id, person_name, character, order
+crew_rows = []          # movie_id, person_id, person_name, job
 
 for page in PAGES:
     print(f"🟠 Requesting for {BASE_URL}/movie/popular (page {page}) ...")
@@ -38,7 +38,6 @@ for page in PAGES:
         movies.append({
             "id": movie_id,
             "imdb_id": details.get("imdb_id"),
-            "original_title": details.get("original_title"),
             "title": details.get("title"),
             "overview": details.get("overview"),
             "original_language": details.get("original_language"),
@@ -67,6 +66,7 @@ for page in PAGES:
         for c in credits["cast"][:5]:
             cast_rows.append({
                 "movie_id": movie_id,
+                "person_id": c["id"],
                 "person_name": c["name"],
                 "character": c["character"],
                 "order": c.get("order"),
@@ -74,38 +74,68 @@ for page in PAGES:
 
         for c in credits["crew"]:
             if c["job"] == "Director":
-                crew_rows.append({"movie_id": movie_id, "person_name": c["name"], "job": c["job"]})
+                crew_rows.append({"movie_id": movie_id, "person_id": c["id"], "person_name": c["name"], "job": c["job"]})
 
     print(f"🟢 Successfully crawled {len(movies)} movies")
 
 def write_csv(filename, fieldnames, rows):
+    cleaned_rows = []
+    text_fields = {
+        fieldname for fieldname in fieldnames
+        if fieldname not in {"id", "movie_id", "genre_id", "company_id", "order", "vote_average", "vote_count", "runtime"}
+    }
+
+    for row in rows:
+        cleaned_row = dict(row)
+        for fieldname in fieldnames:
+            value = cleaned_row.get(fieldname)
+            if isinstance(value, str):
+                cleaned_row[fieldname] = value.strip() or ("Unknown" if fieldname in text_fields else "")
+            elif value is None and fieldname in text_fields:
+                cleaned_row[fieldname] = "Unknown"
+            elif value is None:
+                cleaned_row[fieldname] = ""
+        cleaned_rows.append(cleaned_row)
+
     with open(os.path.join(OUT_DIR, filename), "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows(cleaned_rows)
         print(f"🟢 Created: {OUT_DIR}/{filename}")
 
 
-write_csv("movies.csv",
-          ["id", "imdb_id", "original_title", "title", "overview", "original_language",
-           "release_date", "runtime", "vote_average", "vote_count"],
-          movies)
+write_csv(
+    "movies.csv",
+    [
+        "id", "imdb_id", "title", "overview", "original_language",
+        "release_date", "runtime", "vote_average", "vote_count"
+    ],
+    movies
+)
 
-write_csv("genres.csv", ["id", "name"],
-          [{"id": k, "name": v} for k, v in genres.items()])
+write_csv(
+    "genres.csv", ["id", "name"],
+    [{"id": k, "name": v} for k, v in genres.items()]
+)
 write_csv("movie_genres.csv", ["movie_id", "genre_id"], movie_genres)
 
-write_csv("companies.csv", ["id", "name", "origin_country"],
-          [{"id": k, "name": v[0], "origin_country": v[1]} for k, v in companies.items()])
+write_csv(
+    "companies.csv", ["id", "name", "origin_country"],
+    [{"id": k, "name": v[0], "origin_country": v[1]} for k, v in companies.items()]
+)
 write_csv("movie_companies.csv", ["movie_id", "company_id"], movie_companies)
 
-write_csv("countries.csv", ["country_code", "name"],
-          [{"country_code": k, "name": v} for k, v in countries.items()])
+write_csv(
+    "countries.csv", ["country_code", "name"],
+    [{"country_code": k, "name": v} for k, v in countries.items()]
+)
 write_csv("movie_countries.csv", ["movie_id", "country_code"], movie_countries)
 
-write_csv("languages.csv", ["language_code", "name"],
-          [{"language_code": k, "name": v} for k, v in languages.items()])
+write_csv(
+    "languages.csv", ["language_code", "name"],
+    [{"language_code": k, "name": v} for k, v in languages.items()]
+)
 write_csv("movie_languages.csv", ["movie_id", "language_code"], movie_languages)
 
-write_csv("cast.csv", ["movie_id", "person_name", "character", "order"], cast_rows)
-write_csv("crew.csv", ["movie_id", "person_name", "job"], crew_rows)
+write_csv("cast.csv", ["movie_id", "person_id", "person_name", "character", "order"], cast_rows)
+write_csv("crew.csv", ["movie_id", "person_id", "person_name", "job"], crew_rows)
