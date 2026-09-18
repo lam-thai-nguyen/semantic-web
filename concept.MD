@@ -3,8 +3,40 @@
 ## 1) Define an ontology for the selected domain
 
 Reusing classes and properties from https://schema.org/.
-- Classes: `schema:Movie`, `schema:Person`, `schema:Country`, `schema:Organization`, `schema:Rating`.
-- Properties: `schema:actor`, `schema:countryOfOrigin`, `schema:director`, `schema:duration`, `schema:productionCompany`, `schema:about`, `schema:abstract`, `schema:genre`, `schema:name`, `schema:datePublished`, `schema:award`.
+
+### Classes
+
+- `schema:Movie` - represents a movie.
+- `schema:Person` - represents an actor, director, or other crew member.
+- `schema:Role` - represents an acting role with character and cast-order details.
+- `schema:Genre` - represents a movie genre.
+- `schema:Country` - represents a country of origin or company location.
+- `schema:Language` - represents a movie language.
+- `schema:Organization` - represents a production company.
+- `schema:AggregateRating` - represents a movie's vote average and vote count.
+
+### Properties
+
+- `schema:abstract` - movie synopsis or overview.
+- `schema:actor` - links a movie to an actor or an acting role.
+- `schema:aggregateRating` - links a movie to its aggregate rating.
+- `schema:characterName` - character portrayed by an actor in a role.
+- `schema:contributor` - links a movie to a non-director crew member.
+- `schema:countryOfOrigin` - links a movie to its country of origin.
+- `schema:datePublished` - movie release date.
+- `schema:director` - links a movie to its director.
+- `schema:duration` - movie runtime as an `xsd:duration`.
+- `schema:genre` - links a movie to a genre.
+- `schema:identifier` - TMDB and IMDb identifiers.
+- `schema:inLanguage` - links a movie to a language.
+- `schema:location` - links a production company to its origin country.
+- `schema:name` - name or title of an entity.
+- `schema:position` - cast order within a movie.
+- `schema:productionCompany` - links a movie to a production company.
+- `schema:ratingCount` - number of votes in an aggregate rating.
+- `schema:ratingValue` - numeric value of an aggregate rating.
+- `schema:roleName` - crew job title when no more specific property is used.
+- `schema:sameAs` - links a movie to its TMDB and IMDb resources.
 
 ## 2) Collect relevant data for this domain
 
