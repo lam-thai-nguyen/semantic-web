@@ -1,0 +1,21 @@
+# Which Adventure movies were released in 2026 that starred Tom Holland?
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?movie_name ?genre ?date ?actor_name
+WHERE {
+    ?id a schema:Movie .
+    ?id schema:name ?movie_name .
+    ?id schema:datePublished ?date .
+    ?id schema:genre ?g .
+    ?g schema:name ?genre .
+    ?id schema:actor ?a .
+    ?a schema:actor ?actor_id .
+    ?actor_id schema:name ?actor_name .
+    FILTER (YEAR(?date) = 2026)
+    FILTER (?genre = "Adventure")
+    FILTER (?actor_name = "Tom Holland")
+}
+LIMIT 10

@@ -1,0 +1,20 @@
+# What is the basic information of a movie?
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?movie_name ?date ?director ?genre ?language ?duration ?url
+WHERE {
+    ?id a schema:Movie .
+    ?id schema:name ?movie_name .
+    ?id schema:datePublished ?date .
+    ?id schema:director ?d .
+    ?d schema:name ?director .
+    ?id schema:genre ?g .
+    ?g schema:name ?genre .
+    ?id schema:inLanguage ?l .
+    ?l schema:name ?language .
+    ?id schema:duration ?duration .
+    ?id schema:sameAs ?url .
+    FILTER (?movie_name = "The Odyssey")
+}

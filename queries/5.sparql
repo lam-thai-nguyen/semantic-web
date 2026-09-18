@@ -1,0 +1,15 @@
+# List 20 highest-rated movies
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?movie_name (?r AS ?rating_value) (?rc AS ?rating_count)
+WHERE {
+    ?id a schema:Movie .
+    ?id schema:name ?movie_name .
+    ?id schema:aggregateRating ?rating .
+    ?rating schema:ratingValue ?r .
+    ?rating schema:ratingCount ?rc .
+}
+ORDER BY DESC(?r)
+LIMIT 20

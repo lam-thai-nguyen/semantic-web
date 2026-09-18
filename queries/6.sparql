@@ -1,0 +1,14 @@
+# Which movies were released before 2026?
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?movie_name ?date
+WHERE {
+    ?id a schema:Movie .
+    ?id schema:name ?movie_name .
+    ?id schema:datePublished ?date .
+    FILTER (?date < "2026-01-01"^^xsd:date)
+}
+LIMIT 10
