@@ -49,3 +49,29 @@ descriptive, date, numeric, and ranking fields become typed literals. The
 relationship CSV files create URI-to-URI links such as `schema:actor`,
 `schema:genre`, `schema:productionCompany`, `schema:countryOfOrigin`, and
 `schema:inLanguage`.
+
+## Query the RDF file from the command line
+
+After generating `output/movies.ttl`, you can run a SPARQL query from the provided example `queries/`
+
+```bash
+python queries.py -Q queries/1.sparql
+```
+
+Replace `queries/1.sparql` with any query file in the table below. The command
+loads the local Turtle graph, executes the query, and prints each result row as
+tab-separated values.
+
+| File | Question |
+| --- | --- |
+| `queries/1.sparql` | List 10 people |
+| `queries/2.sparql` | List 10 movies |
+| `queries/3.sparql` | List 10 actors for Spider-Man: Brand New Day movie |
+| `queries/4.sparql` | What is the basic information of a movie? |
+| `queries/5.sparql` | List 20 highest-rated movies |
+| `queries/6.sparql` | Which movies were released before 2026? |
+| `queries/7.sparql` | Which Adventure movies were released in 2026? |
+| `queries/8.sparql` | Which Adventure movies were released in 2026 that starred Tom Holland? |
+| `queries/9.sparql` | Which actors have worked with Tom Holland in more than 2 movies? |
+| `queries/10.sparql` | Which movies has Tom Holland starred in? |
+| `queries/11.sparql` | Which movies has Christopher Nolan directed? |
