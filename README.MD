@@ -1,4 +1,8 @@
-# Semantic web
+# Linked Open Data Application using Movie Knowledge Graph
+
+## Conceptualization
+
+Refer to [concept.MD](concept.MD)
 
 ## Set up environment
 
