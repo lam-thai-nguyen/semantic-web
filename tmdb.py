@@ -4,6 +4,8 @@ import os
 import requests
 
 API_KEY = os.getenv("TMDB_API_KEY")
+if not API_KEY:
+    raise RuntimeError("Set the TMDB_API_KEY environment variable before running this script.")
 BASE_URL = "https://api.themoviedb.org/3"
 
 PAGES = [1]  # 20 movies per page

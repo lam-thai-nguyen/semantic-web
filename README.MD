@@ -21,9 +21,16 @@ writes the results as CSV files in the `data/` directory. It retrieves popular
 movies, movie details, genres, production companies, countries, languages, the
 top five cast members, and directors.
 
-Before running the script, configure a valid TMDB API key in `tmdb.py`. The
-number of popular-movie pages to collect can be changed through the `PAGES`
-setting in the same file.
+Before running the script, configure a valid TMDB API key in the
+`TMDB_API_KEY` environment variable. Do not put the key in `tmdb.py` or commit
+it to Git. On PowerShell, set it for the current session with:
+
+```powershell
+$env:TMDB_API_KEY = "your-tmdb-api-key"
+```
+
+The number of popular-movie pages to collect can be changed through the
+`PAGES` setting in `tmdb.py`.
 
 Run the data collection script from the project root:
 
