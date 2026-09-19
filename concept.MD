@@ -46,10 +46,14 @@ Reusing classes and properties from https://schema.org/.
 
 - Transform raw data (CSV) into RDF (Turtle) using URIs 
 
-## 4) Find and establish links to other datasets to obtain 5* standard
+## 4) Build an ontology using OWL
+
+- Define ontology classes, properties, restrictions, and relationships using OWL
+
+## 5) Find and establish links to other datasets to obtain 5* standard
 
 - Link to DBpedia, Wikidata for shared entities
 
-## 5) Provide an interface via SPARQL endpoint to query the data
+## 6) Provide an interface via SPARQL endpoint to query the data
 
 - Set up a SPARQL endpoint via Apache Jena Fuseki
