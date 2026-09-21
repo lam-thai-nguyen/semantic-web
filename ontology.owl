@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <https://schema.org/> .
+@prefix kg: <https://example.org/ontology/> .
 
 <https://example.org/ontology/movie-knowledge-graph>
     a owl:Ontology ;
@@ -143,6 +144,31 @@ schema:productionCompany
     rdfs:label "production company"@en ;
     rdfs:domain schema:Movie ;
     rdfs:range schema:Organization .
+
+kg:directedMovie
+    a owl:ObjectProperty ;
+    rdfs:label "directed movie"@en ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Movie ;
+    owl:inverseOf schema:director .
+
+kg:productionCountry
+    a owl:ObjectProperty ;
+    rdfs:label "production country"@en ;
+    rdfs:domain schema:Movie ;
+    rdfs:range schema:Country ;
+    owl:propertyChainAxiom (
+        schema:productionCompany
+        schema:location
+    ) .
+
+kg:imdbPage
+    a owl:ObjectProperty,
+        owl:FunctionalProperty,
+        owl:InverseFunctionalProperty ;
+    rdfs:label "IMDb page"@en ;
+    rdfs:domain schema:Movie ;
+    rdfs:range rdfs:Resource .
 
 #################################################################
 # Datatype properties
