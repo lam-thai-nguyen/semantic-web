@@ -1,0 +1,9 @@
+# Does "Avengers: Infinity War" have two different IMDb pages?
+
+PREFIX schema: <https://schema.org/>
+PREFIX kg: <https://example.org/ontology/>
+
+ASK {
+    <https://example.org/movie/299536> kg:imdbPage ?url1, ?url2 .
+    FILTER (?url1 != ?url2)
+}

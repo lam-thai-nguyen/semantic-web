@@ -1,0 +1,8 @@
+# Do "Avengers: Infinity War" and "Avengers: Endgame" share an IMDb page?
+
+PREFIX kg: <https://example.org/ontology/>
+
+ASK {
+    <https://example.org/movie/299536> kg:imdbPage ?url .
+    <https://example.org/movie/299534> kg:imdbPage ?url .
+}
