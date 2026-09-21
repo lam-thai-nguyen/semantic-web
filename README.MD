@@ -51,8 +51,8 @@ Output: `./ontology.owl` (manually written)
 After generating `output/movies.ttl` and building `./ontology.owl`, you can run a SPARQL query from the provided example `queries/`
 
 ```bash
-python queries.py -Q queries/1.sparql --no-reasoning  # for Q1 -> Q10
-python queries.py -Q queries/11.sparql  # for Q11 -> Q14
+python ask.py -Q queries/1.sparql --no-reasoning  # for Q1 -> Q10
+python ask.py -Q queries/11.sparql  # for Q11 -> Q14
 ```
 
 | File (queries/) | Target question | Requires Deduction | KG Expressiveness |
