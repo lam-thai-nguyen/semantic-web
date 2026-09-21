@@ -36,6 +36,13 @@ def main():
             print(str(results.askAnswer).lower())
             return
 
+        if results.type == "DESCRIBE":
+            serialized = results.serialize(format="turtle")
+            if isinstance(serialized, bytes):
+                serialized = serialized.decode()
+            print(serialized, end="")
+            return
+
         headers = [str(v) for v in results.vars] if results.vars else []
         print(tabulate(list(results), headers=headers, tablefmt="simple"))
         return
