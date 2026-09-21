@@ -18,8 +18,9 @@ The planned technology and data stack is:
   five-star Linked Open Data standard.
 - **Query interface:** Provide the data through a SPARQL endpoint using Apache
   Jena Fuseki.
-- **Environment:** Use the project setup documented in `README.MD`, including
-  the `semantic-web` Conda environment and dependencies from `requirements.txt`.
+- **Environment:** Use the Python interpreter from the `semantic-web` Conda
+  environment and the dependencies from `requirements.txt`, as documented in
+  `README.MD`.
 
 When making implementation decisions, preserve semantic-web interoperability,
 valid RDF, consistent URI design, reuse of established vocabularies, and
