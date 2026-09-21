@@ -46,7 +46,7 @@ To enable deduction (ie making new facts using logic), we need to add constraint
 
 Output: `./ontology.owl` (manually written)
 
-## Query the RDF file from the command line
+## Query the Knowledge Graph via CLI
 
 After generating `output/movies.ttl` and building `./ontology.owl`, you can run a SPARQL query from the provided example `queries/`
 
