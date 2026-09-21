@@ -32,6 +32,10 @@ def main():
 
     if query:
         results = g.query(query)
+        if results.type == "ASK":
+            print(str(results.askAnswer).lower())
+            return
+
         headers = [str(v) for v in results.vars] if results.vars else []
         print(tabulate(list(results), headers=headers, tablefmt="simple"))
         return
