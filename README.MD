@@ -66,3 +66,7 @@ python queries.py -Q queries/1.sparql
 | 8.sparql | List 20 highest-rated "Action" movies since 2020 | o | ⭐⭐ |
 | 9.sparql | List 20 highest-rated "Action" movies since 2020 that starred Tom Holland | o | ⭐⭐ |
 | 10.sparql | List 20 actors that have worked with Tom Holland in more than 1 movie | o | ⭐⭐ |
+| 11.sparql | Which movies did this person direct? | x | ⭐⭐⭐ |
+| 12.sparql | Which country is this movie's production company from? | x | ⭐⭐⭐ |
+| 13.sparql | Does this movie have two different IMDb pages? | x | ⭐⭐⭐ |
+| 14.sparql | Do these two movies share an IMDb page? | x | ⭐⭐⭐ |
