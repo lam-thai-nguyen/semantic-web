@@ -3,13 +3,19 @@ id,name,origin_country
 5,Columbia Pictures,US
 84041,Pascal Pictures,US
 22213,TSG Entertainment,US
-94218,Troll Court Entertainment,US
-296158,Keylight Pictures,US
-25120,Warner Animation Group,US
+47,Constantin Film,DE
+240675,Subconscious,US
+829,Vertigo Entertainment,US
+342,Davis Films,FR
+125281,PlayStation Productions,US
+559,TriStar Pictures,US
 174,Warner Bros. Pictures,US
 216687,Domain Entertainment,US
 11461,Bad Robot,US
 171235,Jackson Pictures,US
+94218,Troll Court Entertainment,US
+296158,Keylight Pictures,US
+25120,Warner Animation Group,US
 33,Universal Pictures,US
 9996,Syncopy,GB
 218768,Wow Point,KR
@@ -19,37 +25,319 @@ id,name,origin_country
 33768,The Solution,US
 218150,Punch Palace Productions,GB
 73492,MadRiver Pictures,US
-9245,Romano Film,
 2,Walt Disney Pictures,US
 73669,Seven Bucks Productions,US
 34081,Flynn Picture Company,US
 122645,5000 Broadway Productions,US
-47,Constantin Film,DE
-240675,Subconscious,US
-829,Vertigo Entertainment,US
-342,Davis Films,FR
-125281,PlayStation Productions,US
-559,TriStar Pictures,US
-32485,Pokeepsie Films,ES
-1009,Crown International Pictures,US
+62454,Legend Pictures,JP
 3349,Scanner-Rhodes Productions,GB
 46225,Untitled Entertainment,US
 290125,Reinvent Yellow,DK
-62454,Legend Pictures,JP
+32485,Pokeepsie Films,ES
+3,Pixar,US
 210099,Amazon MGM Studios,US
 244481,Rockwood Pictures,GB
-107352,Sithara Entertainments,IN
-172461,Srikara Studios,IN
-166697,Fortune Four Cinemas,IN
-198917,Come and See Pictures,ID
-7872,Rapi Films,ID
-4399,Barunson E&A,KR
-46840,Legacy Pictures,ID
-82819,Skydance Media,US
-104228,Maximum Effort,US
-129200,GoldDay,US
-3,Pixar,US
 155758,Tea Shop Productions,GB
 273145,Under the Shell,US
 154063,Capstone Pictures,US
 3172,Blumhouse Productions,US
+107352,Sithara Entertainments,IN
+172461,Srikara Studios,IN
+166697,Fortune Four Cinemas,IN
+155744,Jagged Edge Productions,GB
+6704,Illumination,US
+42614,Vision Sugimoto,JP
+3656,GAGA Communications,JP
+235192,Lukra Films,PL
+82819,Skydance Media,US
+104228,Maximum Effort,US
+129200,GoldDay,US
+198917,Come and See Pictures,ID
+7872,Rapi Films,ID
+4399,Barunson E&A,KR
+46840,Legacy Pictures,ID
+99376,Dee Company,ID
+158529,Ethea Entertainment,US
+220517,Luber-Roklin Entertainment,US
+202263,Pitt Street Productions,US
+308708,Aquarius Films,ES
+308732,The Last Sunrise,US
+71738,Spin Master,CA
+2348,Nickelodeon Movies,US
+24955,Paramount Animation,US
+84651,Draco Films,MX
+270146,Paramount Television Studios,US
+196800,Forged Films,KR
+91505,Plus M Entertainment,KR
+168283,Westworld Story,KR
+77973,Lord Miller,US
+232193,Open Invite Entertainment,US
+22842,Waypoint Entertainment,US
+109501,Bazelevs,US
+59827,Patrick Aiello Productions,US
+231386,Magenta Light Studios,US
+2520,Arclight Films,US
+200176,Simmons/Hamilton Productions,US
+11068,Nostromo Pictures,ES
+76098,Aristos Films,
+293380,DW Film Holdings,AU
+229487,Rabbits Black,US
+2623,Blue Rider Pictures,US
+56,Amblin Entertainment,US
+4,Paramount Pictures,US
+20187,Flying Bark Productions,AU
+58209,Studio Mir,KR
+149943,Avatar Studios,US
+76907,Atomic Monster,US
+2575,21 Laps Entertainment,US
+41077,A24,US
+262307,Phobos,CA
+251729,The North Road Company,US
+117672,Kavac Film,IT
+7306,The Match Factory,DE
+204957,MUBI,GB
+223013,Sur Film,ES
+214895,Crybaby,GB
+128344,The Apartment Pictures,IT
+251066,In Bloom,IT
+187321,Cinema Inflámavel,BR
+221028,Gold Rush Pictures,GB
+289340,Rosebushpruning,ES
+309458,SCoT(T),FR
+13839,Metafilms,CA
+143363,Star Distribution,
+1,Lucasfilm Ltd.,US
+7297,Fairview Entertainment,US
+9245,Romano Film,
+122699,iQIYI Pictures （重复 同 iQiyi Motion Pictures）,CN
+197030,Tao Piao Piao 淘票票,CN
+25657,Hairun Pictures Company,CN
+250765,Dong Fang Chen Xiang,CN
+813,Di Novi Pictures,US
+4258,Fortis Films,US
+79,Village Roadshow Pictures,US
+6125,Walt Disney Animation Studios,US
+158526,Walt Disney Animation Studios,CA
+97,Castle Rock Entertainment,US
+217982,Astral Future,US
+208153,Dreamtime Entertainment,
+124504,Oakhurst Entertainment,US
+121204,BondIt Media Capital,US
+198605,Latigo Films,
+179981,Thomasville Pictures,US
+185588,Eyevox Entertainment,
+210197,AF Films,ES
+304095,Match Point,
+85150,Zip Cinema,KR
+2785,Warner Bros. Animation,US
+429,DC,US
+127928,20th Century Studios,US
+574,Lightstorm Entertainment,US
+138783,Man in a Tree Productions,US
+208281,Amazon Studios France,FR
+303782,Originals by Trésor,
+120768,Trésor Films,FR
+106544,AGBO,US
+184898,DC Studios,US
+11565,The Safran Company,US
+10163,Working Title,GB
+1973,Three Strange Angels,GB
+102060,Ford Films,US
+254333,Little Shadows,US
+254334,Hello Moon,US
+25884,Raven Banner Entertainment,CA
+923,Legendary Pictures,US
+13769,Lynda Obst Productions,US
+61975,Flawless Production,GB
+303075,Cousin Jones,US
+32537,Blossom Films,US
+1088,Alcon Entertainment,US
+1608,Wayans Bros. Entertainment,US
+14,Miramax,US
+5887,ufotable,JP
+2883,Aniplex,JP
+2918,Shueisha,JP
+10211,Alfran Productions,US
+16311,Albert S. Ruddy Productions,US
+521,DreamWorks Animation,US
+86773,Madants,PL
+86772,Neda Film,GR
+2801,Film i Väst,SE
+8288,Zentropa International Sweden,SE
+8000,Broken Road Productions,US
+72954,AllyCat Entertainment,US
+110723,Nickel City Pictures,US
+221397,A Higher Standard,US
+219277,G2 Dispatch,AU
+165435,Angel Studios,US
+309655,International Media Funds Management,AU
+209819,Bright White Light,GB
+28382,Kennedy Miller Mitchell,AU
+41624,RatPac Entertainment,US
+52270,Basque Films,ES
+81,Plan B Entertainment,US
+12288,Nintendo,JP
+3952,Hemdale,GB
+1280,Pacific Western,US
+444,Dune Entertainment,US
+25,20th Century Fox,US
+133789,Ingenious Film Partners,GB
+176762,Kevin Feige Productions,US
+12,New Line Cinema,US
+3287,Screen Gems,US
+768,Ghost House Pictures,US
+437,Heyday Films,GB
+436,1492 Pictures,US
+180839,Lyrical Media,US
+172841,Ryder Picture Company,US
+507,Atlas Entertainment,US
+15123,Breakheart Films,US
+239215,Peters Creek Entertainment,US
+241198,Rodi Medya,TR
+241199,Saros Film,TR
+137004,Perfection Hunter Productions,US
+1020,Millennium Media,US
+10284,Edko Films,HK
+12142,XYZ Films,US
+131092,Zhejiang Hengdian Film Production,CN
+22146,Black Bear Pictures,US
+1474,Desperate Pictures,US
+2251,Sony Pictures Animation,US
+14439,Arad Productions,US
+7505,Marvel Entertainment,US
+266136,Davis Raccoon Films,CA
+144925,Misil Producciones,
+220736,Pluma Cine,
+279535,Closer,
+1423,Escape Artists,US
+168848,Mattel Studios,US
+11,WingNut Films,NZ
+5237,The Saul Zaentz Company,US
+149142,Vivamax,PH
+372,Groucho II Film Partnership,
+1885,Silver Pictures,US
+101405,6th & Idaho Motion Picture Company,US
+119245,Dylan Clark Productions,US
+128064,DC Films,US
+303077,G.E.D. Media,US
+711,Fox 2000 Pictures,US
+508,Regency Enterprises,US
+4700,Linson Entertainment,US
+20555,Taurus Film,DE
+100972,RSVP Movies,IN
+98390,Flying Unicorn Entertainment,IN
+412,Wendy Finerman Productions,US
+1645,Scott Free Productions,GB
+57043,Bud Yorkin Productions,US
+79529,Torridon Films,US
+101829,16:14 Entertainment,US
+11341,Stage 6 Films,US
+2527,Marc Platt Productions,US
+1632,Lionsgate,US
+221429,Media Capital Technologies,US
+198785,Hidden Pictures,US
+284257,Pretty Dangerous Pictures,US
+1009,Crown International Pictures,US
+34034,LStar Capital,US
+253186,CineMachine,US
+118472,Stampede Ventures,US
+115416,Skydance Animation,US
+179999,Skydance Animation,ES
+59,A Band Apart,US
+216,Jersey Films,US
+19551,Marvel Enterprises,US
+326,Laura Ziskin Productions,US
+119141,Handmade films in Norwegian Woods,NO
+38072,Nordisk Film Norway,NO
+21920,The Steve Tisch Company,US
+71928,All Media A Start Company,RU
+114676,START Studio,RU
+13850,Sverdlovsk Film Studio,RU
+42877,"Yellow, Black & White",RU
+119813,Premier Studios,RU
+130,Jerry Bruckheimer Films,US
+199632,Dawn Apollo Films,US
+194232,Apple Studios,US
+19647,Monolith Pictures,US
+183717,186K Films,US
+118854,Rideback,US
+27497,Star Thrower Entertainment,US
+72063,Zapruder Films,CA
+221347,Scott Free Productions,US
+38145,Bristol Automotive,US
+7493,FilmNation Entertainment,US
+19092,P of A Productions,GB
+171656,Walt Disney Feature Animation,US
+290,Ingenious Media,GB
+3672,The Gotham Group,US
+8569,Dayday Films,GB
+12292,Temple Hill Entertainment,US
+19094,MIRACLE Productions,DE
+10288,Don Simpson/Jerry Bruckheimer Films,US
+285968,Wicked/Good,IE
+129815,Wild Atlantic Pictures,IE
+19936,Second Mate Productions,US
+7291,Olive Bridge Entertainment,US
+462,Patalex IV Productions,GB
+184518,C2 Motion Picture Group,US
+2900,Toff Guy Films,GB
+286985,Red Sea Film Foundation,SA
+10342,Studio Ghibli,JP
+1779,Tokuma Shoten,JP
+6755,Nippon Television Network Corporation,JP
+11847,Mitsubishi,JP
+1778,dentsu,JP
+1780,TFC,JP
+164892,The Walt Disney Company (Japan),JP
+252367,Fireside Films,US
+233939,Blacksmith,FR
+221513,Working Title Films,US
+120524,Unanimous Media,US
+184287,Modern Magic,US
+79426,MACRO,US
+224643,Huge Film,AU
+167684,Range Media Partners,US
+276,The Guber-Peters Company,US
+53462,Matt Tolmach Productions,US
+91797,Hutch Parker Entertainment,US
+69125,Mythri Movie Makers,IN
+41096,Lonetree Entertainment,US
+2767,Mace Neufeld Productions,US
+303697,"Gen1 Entertainment, LLC",
+11537,LAIKA,US
+8915,Pandemonium,US
+445,Major Studio Partners,US
+14440,Red Wagon Entertainment,US
+21904,Mill Film,GB
+7,DreamWorks Pictures,US
+3982,Darkwoods Productions,US
+21777,TC Productions,US
+308,The Weinstein Company,US
+6817,Zehnte Babelsberg Film,DE
+6818,Visiona Romantica,US
+23,Imagine Entertainment,US
+187063,Brian Grazer Productions,US
+110691,Mojang Studios,SE
+159602,On the Roam,US
+83036,Joint Effort,US
+13240,Bron Studios,CA
+31375,Evergreen Media Group,US
+32301,Causeway Films,AU
+150239,Salmira Productions,US
+7584,Screen Australia,AU
+204763,VicScreen,AU
+15780,Arenamedia,AU
+159883,Lazy Susan Films,AU
+18609,BoulderLight Pictures,US
+4286,Juno Pix,US
+16775,Arnold Kopelson Productions,US
+272654,Walt Disney Japan,JP
+12518,d-rights,JP
+882,TOHO,JP
+520,Pacific Data Images,US
+1311,The Asylum,US
+122772,The Story Factory,US
+23949,RAW,GB
+183787,Wild State,US
+21,Metro-Goldwyn-Mayer,US
+30148,Bona Film Group,CN

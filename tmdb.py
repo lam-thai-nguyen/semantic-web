@@ -8,7 +8,7 @@ if not API_KEY:
     raise RuntimeError("Set the TMDB_API_KEY environment variable before running this script.")
 BASE_URL = "https://api.themoviedb.org/3"
 
-PAGES = [1]  # 20 movies per page
+PAGES = [1,2,3,4,5,6,7,8,9,10]  # 20 movies per page
 OUT_DIR = "data"
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -65,7 +65,7 @@ for page in PAGES:
             languages[l["iso_639_1"]] = l.get("english_name") or l.get("name")
             movie_languages.append({"movie_id": movie_id, "language_code": l["iso_639_1"]})
 
-        for c in credits["cast"][:5]:
+        for c in credits["cast"][:10]:
             cast_rows.append({
                 "movie_id": movie_id,
                 "person_id": c["id"],
@@ -78,7 +78,7 @@ for page in PAGES:
             if c["job"] == "Director":
                 crew_rows.append({"movie_id": movie_id, "person_id": c["id"], "person_name": c["name"], "job": c["job"]})
 
-    print(f"🟢 Successfully crawled {len(movies)} movies")
+    print(f"🟢 Successfully crawled {len(movies)} movies in total")
 
 def write_csv(filename, fieldnames, rows):
     cleaned_rows = []
