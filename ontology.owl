@@ -99,7 +99,6 @@ schema:aggregateRating
     rdfs:label "aggregate rating"@en ;
     rdfs:domain schema:Movie ;
     rdfs:range schema:AggregateRating ;
-    owl:inverseOf schema:ratingFor .
 
 schema:contributor
     a owl:ObjectProperty ;
@@ -144,13 +143,6 @@ schema:productionCompany
     rdfs:label "production company"@en ;
     rdfs:domain schema:Movie ;
     rdfs:range schema:Organization .
-
-schema:ratingFor
-    a owl:ObjectProperty ;
-    rdfs:label "rating for"@en ;
-    rdfs:domain schema:AggregateRating ;
-    rdfs:range schema:Movie ;
-    owl:inverseOf schema:aggregateRating .
 
 #################################################################
 # Datatype properties

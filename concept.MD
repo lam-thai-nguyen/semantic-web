@@ -38,7 +38,6 @@ Reusing classes and properties from https://schema.org/.
 - `schema:position` - cast order within a movie.
 - `schema:productionCompany` - links a movie to a production company.
 - `schema:ratingCount` - number of votes in an aggregate rating.
-- `schema:ratingFor` - links an aggregate rating to the movie it describes.
 - `schema:ratingValue` - numeric value of an aggregate rating.
 - `schema:roleName` - crew job title when no more specific property is used.
 - `schema:sameAs` - links a movie to its TMDB and IMDb resources.
