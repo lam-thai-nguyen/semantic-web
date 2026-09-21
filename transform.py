@@ -9,6 +9,7 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, XSD
 
 SCHEMA = Namespace("https://schema.org/")
+KG = Namespace("https://example.org/ontology/")
 DEFAULT_BASE_URI = "https://example.org/"
 
 
@@ -79,6 +80,7 @@ def transform(data_dir: Path, output_path: Path, base_uri: str) -> Graph:
     """Transform all movie CSV files into an RDF graph and serialize it."""
     graph = Graph()
     graph.bind("schema", SCHEMA)
+    graph.bind("kg", KG)
     graph.bind("rdf", RDF)
     graph.bind("xsd", XSD)
 
@@ -148,7 +150,9 @@ def transform(data_dir: Path, output_path: Path, base_uri: str) -> Graph:
         imdb_id = non_empty(row.get("imdb_id"))
         if imdb_id:
             graph.add((subject, SCHEMA.identifier, Literal(imdb_id)))
-            graph.add((subject, SCHEMA.sameAs, URIRef(f"https://www.imdb.com/title/{quote(imdb_id, safe='')}/")))
+            imdb_page = URIRef(f"https://www.imdb.com/title/{quote(imdb_id, safe='')}/")
+            graph.add((subject, SCHEMA.sameAs, imdb_page))
+            graph.add((subject, KG.imdbPage, imdb_page))
         graph.add((subject, SCHEMA.sameAs, URIRef(f"https://www.themoviedb.org/movie/{quote(row['id'], safe='')}")))
 
     # transform 7. :movie_id (1368337) schema:actor :person_id (1136406)
