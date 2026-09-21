@@ -16,69 +16,54 @@ pip install -r requirements.txt
 
 ## Collect data from TMDB
 
-The `tmdb.py` script collects movie data from The Movie Database (TMDB) and
-writes the results as CSV files in the `data/` directory. It retrieves popular
-movies, movie details, genres, production companies, countries, languages, the
-top five cast members, and directors.
-
-Before running the script, configure a valid TMDB API key in the
-`TMDB_API_KEY` environment variable. Do not put the key in `tmdb.py` or commit
-it to Git. On PowerShell, set it for the current session with:
+Get an API Key from https://www.themoviedb.org/, then store it as an environment variable. On Windows Powershell, run:
 
 ```powershell
 $env:TMDB_API_KEY = "your-tmdb-api-key"
 ```
 
-The number of popular-movie pages to collect can be changed through the
-`PAGES` setting in `tmdb.py`.
-
-Run the data collection script from the project root:
+To collect the data, run:
 
 ```bash
 python tmdb.py
 ```
 
-The generated files include `movies.csv`, `cast.csv`, `crew.csv`, entity
-lookup files such as `genres.csv` and `companies.csv`, and relationship files
-such as `movie_genres.csv` and `movie_companies.csv`.
+The generated files include `movies.csv`, `cast.csv`, `crew.csv`, entity lookup files such as `genres.csv` and `companies.csv`, and relationship files such as `movie_genres.csv` and `movie_companies.csv`.
 
 ## Transform CSV data into RDF
 
-The CSV files in `data/` can be transformed into a consolidated Turtle graph:
+To transform table data into RDF triples (Turtle notation), run:
 
 ```bash
-python transform.py --base-uri https://example.org/
+python transform.py
 ```
 
-The default output is `output/movies.ttl`. Entity identifiers become stable URI
-paths (`movie`, `person`, `company`, `country`, `genre`, and `language`), while
-descriptive, date, numeric, and ranking fields become typed literals. The
-relationship CSV files create URI-to-URI links such as `schema:actor`,
-`schema:genre`, `schema:productionCompany`, `schema:countryOfOrigin`, and
-`schema:inLanguage`.
+Output: `output/movies.ttl`
+
+## Build an ontology using OWL
+
+To enable deduction (ie making new facts using logic), we need to add constraints on top of RDF triples by writing `./ontology.owl`. Then, we use `owlrl` package for SPARQL reasoning.
+
+Output: `./ontology.owl` (manually written)
 
 ## Query the RDF file from the command line
 
-After generating `output/movies.ttl`, you can run a SPARQL query from the provided example `queries/`
+After generating `output/movies.ttl` and building `./ontology.owl`, you can run a SPARQL query from the provided example `queries/`
 
 ```bash
 python queries.py -Q queries/1.sparql
 ```
 
-Replace `queries/1.sparql` with any query file in the table below. The command
-loads the local Turtle graph, executes the query, and prints each result row as
-tab-separated values.
-
-| File | Question |
-| --- | --- |
-| `queries/1.sparql` | List 10 people |
-| `queries/2.sparql` | List 10 movies |
-| `queries/3.sparql` | List 10 actors for Spider-Man: Brand New Day movie |
-| `queries/4.sparql` | What is the basic information of a movie? |
-| `queries/5.sparql` | List 20 highest-rated movies |
-| `queries/6.sparql` | Which movies were released before 2026? |
-| `queries/7.sparql` | Which Adventure movies were released in 2026? |
-| `queries/8.sparql` | Which Adventure movies were released in 2026 that starred Tom Holland? |
-| `queries/9.sparql` | Which actors have worked with Tom Holland in more than 2 movies? |
-| `queries/10.sparql` | Which movies has Tom Holland starred in? |
-| `queries/11.sparql` | Which movies has Christopher Nolan directed? |
+| File | Question | Deduction |
+| --- | --- | :---: |
+| `queries/1.sparql` | List 10 people | o |
+| `queries/2.sparql` | List 10 movies | o |
+| `queries/3.sparql` | List 10 actors for Spider-Man: Brand New Day movie | o |
+| `queries/4.sparql` | What is the basic information of a movie? | o |
+| `queries/5.sparql` | List 20 highest-rated movies | o |
+| `queries/6.sparql` | Which movies were released before 2026? | o |
+| `queries/7.sparql` | Which Adventure movies were released in 2026? | o |
+| `queries/8.sparql` | Which Adventure movies were released in 2026 that starred Tom Holland? | o |
+| `queries/9.sparql` | Which actors have worked with Tom Holland in more than 2 movies? | o |
+| `queries/10.sparql` | Which movies has Tom Holland starred in? | o |
+| `queries/11.sparql` | Which movies has Christopher Nolan directed? | o |
