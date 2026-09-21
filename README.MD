@@ -55,7 +55,7 @@ python queries.py -Q queries/1.sparql
 ```
 
 | File (queries/) | Target question | Requires Deduction | KG Expressiveness |
-| --- | --- | :---: | :---: |
+| :---: | --- | :---: | :---: |
 | 1.sparql | List 20 movies | o | ⭐ |
 | 2.sparql | List 20 actors | o | ⭐ |
 | 3.sparql | List 20 directors | o | ⭐ |
