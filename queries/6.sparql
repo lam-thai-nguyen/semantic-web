@@ -1,14 +1,15 @@
-# Which movies were released before 2026?
+# List 20 highest-rated movies
 
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?movie_name ?date
+SELECT DISTINCT ?movie_name (?r AS ?rating_value) (?rc AS ?rating_count)
 WHERE {
     ?id a schema:Movie .
     ?id schema:name ?movie_name .
-    ?id schema:datePublished ?date .
-    FILTER (?date < "2026-01-01"^^xsd:date)
+    ?id schema:aggregateRating ?rating .
+    ?rating schema:ratingValue ?r .
+    ?rating schema:ratingCount ?rc .
 }
-LIMIT 10
+ORDER BY DESC(?r)
+LIMIT 20

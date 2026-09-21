@@ -1,15 +1,13 @@
-# List 10 actors for Spider-Man: Brand New Day movie
+# List 20 directors
 
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?movie_id ?movie_name ?actor_id ?actor_name
+SELECT DISTINCT ?movie_name ?director_name
 WHERE {
   ?movie_id a schema:Movie .
   ?movie_id schema:name ?movie_name .
-  ?movie_id schema:actor ?actor_id .
-  ?actor_id schema:name ?actor_name .
-  FILTER (?movie_name = "Spider-Man: Brand New Day")
-  FILTER (isIRI(?actor_id))
+  ?movie_id schema:director ?director_id .
+  ?director_id schema:name ?director_name .
 }
-LIMIT 10
+LIMIT 20

@@ -54,16 +54,15 @@ After generating `output/movies.ttl` and building `./ontology.owl`, you can run 
 python queries.py -Q queries/1.sparql
 ```
 
-| File | Question | Deduction |
-| --- | --- | :---: |
-| `queries/1.sparql` | List 10 people | o |
-| `queries/2.sparql` | List 10 movies | o |
-| `queries/3.sparql` | List 10 actors for Spider-Man: Brand New Day movie | o |
-| `queries/4.sparql` | What is the basic information of a movie? | o |
-| `queries/5.sparql` | List 20 highest-rated movies | o |
-| `queries/6.sparql` | Which movies were released before 2026? | o |
-| `queries/7.sparql` | Which Adventure movies were released in 2026? | o |
-| `queries/8.sparql` | Which Adventure movies were released in 2026 that starred Tom Holland? | o |
-| `queries/9.sparql` | Which actors have worked with Tom Holland in more than 2 movies? | o |
-| `queries/10.sparql` | Which movies has Tom Holland starred in? | o |
-| `queries/11.sparql` | Which movies has Christopher Nolan directed? | o |
+| File (queries/) | Target question | Requires Deduction | KG Expressiveness |
+| --- | --- | :---: | :---: |
+| 1.sparql | List 20 movies | o | ⭐ |
+| 2.sparql | List 20 actors | o | ⭐ |
+| 3.sparql | List 20 directors | o | ⭐ |
+| 4.sparql | List 5 actors for "Spider-Man: Brand New Day" the movie | o | ⭐ |
+| 5.sparql | What is the basic information of "The Odyssey" the movie? | o | ⭐ |
+| 6.sparql | List 20 highest-rated movies | o | ⭐⭐ |
+| 7.sparql | List 20 highest-rated "Action" movies | o | ⭐⭐ |
+| 8.sparql | List 20 highest-rated "Action" movies since 2020 | o | ⭐⭐ |
+| 9.sparql | List 20 highest-rated "Action" movies since 2020 that starred Tom Holland? | o | ⭐⭐ |
+| 10.sparql | List 20 actors that have worked with Tom Holland in more than 1 movie | o | ⭐⭐ |

@@ -1,15 +1,20 @@
-# List 20 highest-rated movies
+# What is the basic information of "The Odyssey" the movie?
 
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?movie_name (?r AS ?rating_value) (?rc AS ?rating_count)
+SELECT ?movie_name ?date ?director ?genre ?language ?duration ?url
 WHERE {
     ?id a schema:Movie .
     ?id schema:name ?movie_name .
-    ?id schema:aggregateRating ?rating .
-    ?rating schema:ratingValue ?r .
-    ?rating schema:ratingCount ?rc .
+    ?id schema:datePublished ?date .
+    ?id schema:director ?d .
+    ?d schema:name ?director .
+    ?id schema:genre ?g .
+    ?g schema:name ?genre .
+    ?id schema:inLanguage ?l .
+    ?l schema:name ?language .
+    ?id schema:duration ?duration .
+    ?id schema:sameAs ?url .
+    FILTER (?movie_name = "The Odyssey")
 }
-ORDER BY DESC(?r)
-LIMIT 20

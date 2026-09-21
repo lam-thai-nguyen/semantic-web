@@ -1,1 +1,20 @@
-# Which movies has Tom Holland starred in?
+# List 20 actors that have worked with Tom Holland in more than 1 movie
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?actor_name (COUNT(DISTINCT ?movie_id) as ?movie_count)
+WHERE {
+    ?movie_id a schema:Movie ;
+            schema:actor ?tom_holland ;
+            schema:actor ?actor_id .
+    ?tom_holland schema:name "Tom Holland" .
+    ?actor_id schema:name ?actor_name .
+    FILTER (isIRI(?tom_holland) && isIRI(?actor_id))
+    FILTER (?actor_id != ?tom_holland)
+}
+GROUP BY ?actor_id ?actor_name
+HAVING (COUNT(DISTINCT ?movie_id) > 1)
+ORDER BY DESC(?movie_count) ?actor_name
+LIMIT 20

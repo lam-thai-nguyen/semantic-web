@@ -1,20 +1,15 @@
-# What is the basic information of a movie?
+# List 5 actors for "Spider-Man: Brand New Day" the movie
 
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?movie_name ?date ?director ?genre ?language ?duration ?url
+SELECT DISTINCT ?movie_name ?actor_name
 WHERE {
-    ?id a schema:Movie .
-    ?id schema:name ?movie_name .
-    ?id schema:datePublished ?date .
-    ?id schema:director ?d .
-    ?d schema:name ?director .
-    ?id schema:genre ?g .
-    ?g schema:name ?genre .
-    ?id schema:inLanguage ?l .
-    ?l schema:name ?language .
-    ?id schema:duration ?duration .
-    ?id schema:sameAs ?url .
-    FILTER (?movie_name = "The Odyssey")
+  ?movie_id a schema:Movie .
+  ?movie_id schema:name ?movie_name .
+  ?movie_id schema:actor ?actor_id .
+  ?actor_id schema:name ?actor_name .
+  FILTER (?movie_name = "Spider-Man: Brand New Day")
+  FILTER (isIRI(?actor_id))
 }
+LIMIT 5
