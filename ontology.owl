@@ -98,7 +98,7 @@ schema:aggregateRating
     a owl:ObjectProperty ;
     rdfs:label "aggregate rating"@en ;
     rdfs:domain schema:Movie ;
-    rdfs:range schema:AggregateRating ;
+    rdfs:range schema:AggregateRating .
 
 schema:contributor
     a owl:ObjectProperty ;
