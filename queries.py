@@ -1,4 +1,5 @@
 import argparse
+import time
 
 from owlrl import DeductiveClosure, OWLRL_Semantics
 from rdflib import Graph
@@ -23,7 +24,10 @@ def main():
     g.parse(args.ontology_file, format="turtle")
 
     if not args.no_reasoning:
+        start = time.time()
         DeductiveClosure(OWLRL_Semantics).expand(g)
+        elapsed = time.time() - start
+        print(f"[timing] OWL-RL Reasoning: {elapsed:.3f}s\n")
 
     query = args.query
     if args.query_file:
@@ -48,4 +52,7 @@ def main():
         return
 
 if __name__ == "__main__":
+    start = time.time()
     main()
+    elapsed = time.time() - start
+    print(f"\n[timing] Total time: {elapsed:.3f}s")
