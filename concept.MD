@@ -7,6 +7,7 @@ Reusing classes and properties from https://schema.org/.
 ### Classes
 
 - `schema:Movie` - represents a movie.
+- `schema:CreativeWork` - Schema.org superclass of `schema:Movie`.
 - `schema:Person` - represents an actor, director, or other crew member.
 - `schema:Role` - represents an acting role with character and cast-order details.
 - `schema:Genre` - represents a movie genre.
@@ -14,6 +15,9 @@ Reusing classes and properties from https://schema.org/.
 - `schema:Language` - represents a movie language.
 - `schema:Organization` - represents a production company.
 - `schema:AggregateRating` - represents a movie's vote average and vote count.
+- `schema:Rating` - Schema.org superclass of `schema:AggregateRating`.
+- `schema:Thing` - Schema.org superclass used by people, countries, and organizations.
+- `schema:Intangible` - Schema.org superclass used by roles, genres, and languages.
 
 ### Properties
 
@@ -34,6 +38,7 @@ Reusing classes and properties from https://schema.org/.
 - `schema:position` - cast order within a movie.
 - `schema:productionCompany` - links a movie to a production company.
 - `schema:ratingCount` - number of votes in an aggregate rating.
+- `schema:ratingFor` - links an aggregate rating to the movie it describes.
 - `schema:ratingValue` - numeric value of an aggregate rating.
 - `schema:roleName` - crew job title when no more specific property is used.
 - `schema:sameAs` - links a movie to its TMDB and IMDb resources.
