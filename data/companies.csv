@@ -140,8 +140,6 @@ id,name,origin_country
 106544,AGBO,US
 184898,DC Studios,US
 11565,The Safran Company,US
-10163,Working Title,GB
-1973,Three Strange Angels,GB
 102060,Ford Films,US
 254333,Little Shadows,US
 254334,Hello Moon,US
@@ -150,6 +148,8 @@ id,name,origin_country
 13769,Lynda Obst Productions,US
 61975,Flawless Production,GB
 303075,Cousin Jones,US
+10163,Working Title,GB
+1973,Three Strange Angels,GB
 32537,Blossom Films,US
 1088,Alcon Entertainment,US
 1608,Wayans Bros. Entertainment,US
@@ -183,6 +183,7 @@ id,name,origin_country
 25,20th Century Fox,US
 133789,Ingenious Film Partners,GB
 176762,Kevin Feige Productions,US
+251926,Other Animal Entertainment,
 12,New Line Cinema,US
 3287,Screen Gems,US
 768,Ghost House Pictures,US
@@ -190,6 +191,9 @@ id,name,origin_country
 436,1492 Pictures,US
 180839,Lyrical Media,US
 172841,Ryder Picture Company,US
+1632,Lionsgate,US
+3281,GK Films,US
+19222,Optimum Productions,US
 507,Atlas Entertainment,US
 15123,Breakheart Films,US
 239215,Peters Creek Entertainment,US
@@ -216,128 +220,8 @@ id,name,origin_country
 149142,Vivamax,PH
 372,Groucho II Film Partnership,
 1885,Silver Pictures,US
+183717,186K Films,US
+118854,Rideback,US
 101405,6th & Idaho Motion Picture Company,US
 119245,Dylan Clark Productions,US
 128064,DC Films,US
-303077,G.E.D. Media,US
-711,Fox 2000 Pictures,US
-508,Regency Enterprises,US
-4700,Linson Entertainment,US
-20555,Taurus Film,DE
-100972,RSVP Movies,IN
-98390,Flying Unicorn Entertainment,IN
-412,Wendy Finerman Productions,US
-1645,Scott Free Productions,GB
-57043,Bud Yorkin Productions,US
-79529,Torridon Films,US
-101829,16:14 Entertainment,US
-11341,Stage 6 Films,US
-2527,Marc Platt Productions,US
-1632,Lionsgate,US
-221429,Media Capital Technologies,US
-198785,Hidden Pictures,US
-284257,Pretty Dangerous Pictures,US
-1009,Crown International Pictures,US
-34034,LStar Capital,US
-253186,CineMachine,US
-118472,Stampede Ventures,US
-115416,Skydance Animation,US
-179999,Skydance Animation,ES
-59,A Band Apart,US
-216,Jersey Films,US
-19551,Marvel Enterprises,US
-326,Laura Ziskin Productions,US
-119141,Handmade films in Norwegian Woods,NO
-38072,Nordisk Film Norway,NO
-21920,The Steve Tisch Company,US
-71928,All Media A Start Company,RU
-114676,START Studio,RU
-13850,Sverdlovsk Film Studio,RU
-42877,"Yellow, Black & White",RU
-119813,Premier Studios,RU
-130,Jerry Bruckheimer Films,US
-199632,Dawn Apollo Films,US
-194232,Apple Studios,US
-19647,Monolith Pictures,US
-183717,186K Films,US
-118854,Rideback,US
-27497,Star Thrower Entertainment,US
-72063,Zapruder Films,CA
-221347,Scott Free Productions,US
-38145,Bristol Automotive,US
-7493,FilmNation Entertainment,US
-19092,P of A Productions,GB
-171656,Walt Disney Feature Animation,US
-290,Ingenious Media,GB
-3672,The Gotham Group,US
-8569,Dayday Films,GB
-12292,Temple Hill Entertainment,US
-19094,MIRACLE Productions,DE
-10288,Don Simpson/Jerry Bruckheimer Films,US
-285968,Wicked/Good,IE
-129815,Wild Atlantic Pictures,IE
-19936,Second Mate Productions,US
-7291,Olive Bridge Entertainment,US
-462,Patalex IV Productions,GB
-184518,C2 Motion Picture Group,US
-2900,Toff Guy Films,GB
-286985,Red Sea Film Foundation,SA
-10342,Studio Ghibli,JP
-1779,Tokuma Shoten,JP
-6755,Nippon Television Network Corporation,JP
-11847,Mitsubishi,JP
-1778,dentsu,JP
-1780,TFC,JP
-164892,The Walt Disney Company (Japan),JP
-252367,Fireside Films,US
-233939,Blacksmith,FR
-221513,Working Title Films,US
-120524,Unanimous Media,US
-184287,Modern Magic,US
-79426,MACRO,US
-224643,Huge Film,AU
-167684,Range Media Partners,US
-276,The Guber-Peters Company,US
-53462,Matt Tolmach Productions,US
-91797,Hutch Parker Entertainment,US
-69125,Mythri Movie Makers,IN
-41096,Lonetree Entertainment,US
-2767,Mace Neufeld Productions,US
-303697,"Gen1 Entertainment, LLC",
-11537,LAIKA,US
-8915,Pandemonium,US
-445,Major Studio Partners,US
-14440,Red Wagon Entertainment,US
-21904,Mill Film,GB
-7,DreamWorks Pictures,US
-3982,Darkwoods Productions,US
-21777,TC Productions,US
-308,The Weinstein Company,US
-6817,Zehnte Babelsberg Film,DE
-6818,Visiona Romantica,US
-23,Imagine Entertainment,US
-187063,Brian Grazer Productions,US
-110691,Mojang Studios,SE
-159602,On the Roam,US
-83036,Joint Effort,US
-13240,Bron Studios,CA
-31375,Evergreen Media Group,US
-32301,Causeway Films,AU
-150239,Salmira Productions,US
-7584,Screen Australia,AU
-204763,VicScreen,AU
-15780,Arenamedia,AU
-159883,Lazy Susan Films,AU
-18609,BoulderLight Pictures,US
-4286,Juno Pix,US
-16775,Arnold Kopelson Productions,US
-272654,Walt Disney Japan,JP
-12518,d-rights,JP
-882,TOHO,JP
-520,Pacific Data Images,US
-1311,The Asylum,US
-122772,The Story Factory,US
-23949,RAW,GB
-183787,Wild State,US
-21,Metro-Goldwyn-Mayer,US
-30148,Bona Film Group,CN

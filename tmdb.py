@@ -8,7 +8,7 @@ if not API_KEY:
     raise RuntimeError("Set the TMDB_API_KEY environment variable before running this script.")
 BASE_URL = "https://api.themoviedb.org/3"
 
-PAGES = [1,2,3,4,5,6,7,8,9,10]  # 20 movies per page
+PAGES = [1,2,3,4,5]  # 20 movies per page
 OUT_DIR = "data"
 os.makedirs(OUT_DIR, exist_ok=True)
 
