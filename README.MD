@@ -46,6 +46,28 @@ To enable deduction (ie making new facts using logic), we need to add constraint
 
 Output: `./ontology.owl` (manually written)
 
+## Link entities with other sources
+
+- Entity to link: intances of `schema:Movie`
+- Linked knowledge graphs: DBpedia & Wikidata
+
+Linking mechanism:
+- Criteria: IMDB id, TMDB id, title, release year
+- Scoring:
+  - Automatically approved (1.0 point): (1) matches imdb, tmdb and year, and (2) can retrieve DBpedia URI
+  - Rejected: due to year mismatch
+  - Needs review: remaining cases
+
+To start linking the Movie KG to Wikidata and DBpedia, run:
+
+```bash
+python link_movies.py
+```
+
+Output:
+- `output/movie_links.ttl` - automatically approved entities
+- `output/movie_candidates.csv` - rejectes and need-review entities (for manual review and appending to the movie_links.ttl file)
+
 ## Query the Knowledge Graph via CLI
 
 After generating `output/movies.ttl` and building `./ontology.owl`, you can run a SPARQL query from the provided example `queries/`
@@ -56,6 +78,8 @@ python ask.py -q queries/11.sparql  # for Q11 -> Q14
 python ask.py -q queries/15.sparql  --target dbpedia --no-reasoning  # for DBpedia remote querying
 python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wikidata remote querying
 ```
+
+⚠️ Known issue: Wikidata rate limit is expected.
 
 | File (queries/) | Target question | Requires Deduction | KG Expressiveness |
 | :---: | --- | :---: | :---: |
@@ -73,4 +97,4 @@ python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wiki
 | 12.sparql | Which country is this movie's production company from? | x | ⭐⭐⭐ |
 | 13.sparql | Does this movie have two different IMDb pages? | x | ⭐⭐⭐ |
 | 14.sparql | Do these two movies share an IMDb page? | x | ⭐⭐⭐ |
-| 15.sparql | What do we know about Tom Holland other sources (DBpedia or Wikidata)? | o | ⭐⭐⭐⭐ |
+| 15.sparql | What do we know about "The Odyssey" the movie from other sources (DBpedia or Wikidata)? | o | ⭐⭐⭐⭐ |
