@@ -1,13 +1,18 @@
 import argparse
+import re
 import time
 
 from owlrl import DeductiveClosure, OWLRL_Semantics
-from rdflib import Graph
+from rdflib import OWL, Graph
+from rdflib.plugins.stores.sparqlstore import SPARQLStore
 from tabulate import tabulate
 
 REMOTE_ENDPOINTS = {
     "wikidata": "https://query.wikidata.org/sparql",
     "dbpedia": "https://dbpedia.org/sparql",
+}
+REMOTE_HEADERS = {
+    "User-Agent": "semantic-web-movie-kg/1.0",
 }
 
 def print_rdflib_results(results):
@@ -25,18 +30,30 @@ def print_rdflib_results(results):
     headers = [str(v) for v in results.vars] if results.vars else []
     print(tabulate(list(results), headers=headers, tablefmt="simple"))
 
-def print_remote_results(results):
-    if "boolean" in results:
-        print(str(results["boolean"]).lower())
-        return
+def remote_query_with_local_links(query, links_path, target):
+    links = Graph()
+    links.parse(links_path, format="turtle")
 
-    bindings = results.get("results", {}).get("bindings", [])
-    variables = results.get("head", {}).get("vars", [])
-    rows = [
-        [binding.get(variable, {}).get("value", "") for variable in variables]
-        for binding in bindings
-    ]
-    print(tabulate(rows, headers=variables, tablefmt="simple"))
+    target_host = f"{target}.org"
+    remote_links = [(subject, obj) for subject, predicate, obj in links
+                    if predicate == OWL.sameAs and target_host in obj]
+
+    same_as_pattern = re.compile(
+        r"(?P<subject><[^>]+>)\s+"
+        r"(?P<predicate>(?:owl:sameAs|"
+        r"<http://www\.w3\.org/2002/07/owl#sameAs>))\s+"
+        r"(?P<object>\?[A-Za-z_][A-Za-z0-9_]*)\s*\."
+    )
+
+    def replace_same_as(match):
+        subject = match.group("subject")[1:-1]
+        objects = [obj for linked_subject, obj in remote_links if str(linked_subject) == subject]
+        if not objects:
+            return "FILTER(false) ."
+        values = " ".join(f"<{obj}>" for obj in objects)
+        return f"VALUES {match.group('object')} {{ {values} }}"
+
+    return same_as_pattern.sub(replace_same_as, query)
 
 def main():
     parser = argparse.ArgumentParser(description="Interactive SPARQL CLI using rdflib")
@@ -66,12 +83,15 @@ def main():
         print_rdflib_results(g.query(query))
         return
 
-    from SPARQLWrapper import JSON, SPARQLWrapper
-    
-    sparql = SPARQLWrapper(REMOTE_ENDPOINTS[args.target])
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    print_remote_results(sparql.query().convert())
+    remote_query = remote_query_with_local_links(query, args.links, args.target)
+    remote_graph = Graph(
+        store=SPARQLStore(
+            REMOTE_ENDPOINTS[args.target],
+            returnFormat="json",
+            headers=REMOTE_HEADERS,
+        )
+    )
+    print_rdflib_results(remote_graph.query(remote_query))
 
 
 if __name__ == "__main__":
