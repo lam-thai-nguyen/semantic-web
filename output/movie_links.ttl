@@ -1,0 +1,264 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+#################################################################
+# Automatically approved
+#################################################################
+
+<https://example.org/movie/1058424> owl:sameAs <http://dbpedia.org/resource/Hope_(2026_film)>,
+        <http://www.wikidata.org/entity/Q117429496> .
+
+<https://example.org/movie/1081003> owl:sameAs <http://dbpedia.org/resource/Supergirl_(2026_film)>,
+        <http://www.wikidata.org/entity/Q116921951> .
+
+<https://example.org/movie/1083381> owl:sameAs <http://dbpedia.org/resource/Backrooms_(film)>,
+        <http://www.wikidata.org/entity/Q125131076> .
+
+<https://example.org/movie/1084242> owl:sameAs <http://dbpedia.org/resource/Zootopia_2>,
+        <http://www.wikidata.org/entity/Q116764712> .
+
+<https://example.org/movie/1084244> owl:sameAs <http://dbpedia.org/resource/Toy_Story_5>,
+        <http://www.wikidata.org/entity/Q113641997> .
+
+<https://example.org/movie/1101383> owl:sameAs <http://dbpedia.org/resource/The_End_of_Oak_Street>,
+        <http://www.wikidata.org/entity/Q124804916> .
+
+<https://example.org/movie/1101412> owl:sameAs <http://dbpedia.org/resource/Fall_2:_Deadpoint>,
+        <http://www.wikidata.org/entity/Q136388712> .
+
+<https://example.org/movie/1108427> owl:sameAs <http://dbpedia.org/resource/Moana_(2026_film)>,
+        <http://www.wikidata.org/entity/Q118996994> .
+
+<https://example.org/movie/1127384> owl:sameAs <http://dbpedia.org/resource/Deep_Water_(2026_film)>,
+        <http://www.wikidata.org/entity/Q124526427> .
+
+<https://example.org/movie/1130948> owl:sameAs <http://dbpedia.org/resource/Rosebush_Pruning>,
+        <http://www.wikidata.org/entity/Q130369934> .
+
+<https://example.org/movie/1137844> owl:sameAs <http://dbpedia.org/resource/Mayday_(2026_film)>,
+        <http://www.wikidata.org/entity/Q124743667> .
+
+<https://example.org/movie/1184918> owl:sameAs <http://dbpedia.org/resource/The_Wild_Robot>,
+        <http://www.wikidata.org/entity/Q124378349> .
+
+<https://example.org/movie/1185806> owl:sameAs <http://dbpedia.org/resource/Paw_Patrol:_The_Dino_Movie>,
+        <http://www.wikidata.org/entity/Q132802215> .
+
+<https://example.org/movie/120> owl:sameAs <http://dbpedia.org/resource/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring>,
+        <http://www.wikidata.org/entity/Q127367> .
+
+<https://example.org/movie/1204680> owl:sameAs <http://dbpedia.org/resource/Coyote_vs._Acme>,
+        <http://www.wikidata.org/entity/Q106392679> .
+
+<https://example.org/movie/1212763> owl:sameAs <http://dbpedia.org/resource/Evil_Dead_Burn>,
+        <http://www.wikidata.org/entity/Q132731331> .
+
+<https://example.org/movie/122> owl:sameAs <http://dbpedia.org/resource/The_Lord_of_the_Rings:_The_Return_of_the_King>,
+        <http://www.wikidata.org/entity/Q131074> .
+
+<https://example.org/movie/1224993> owl:sameAs <http://dbpedia.org/resource/Dark_Nuns>,
+        <http://www.wikidata.org/entity/Q131468788> .
+
+<https://example.org/movie/1226863> owl:sameAs <http://dbpedia.org/resource/The_Super_Mario_Galaxy_Movie>,
+        <http://www.wikidata.org/entity/Q124806421> .
+
+<https://example.org/movie/1228710> owl:sameAs <http://dbpedia.org/resource/The_Mandalorian_and_Grogu>,
+        <http://www.wikidata.org/entity/Q124246549> .
+
+<https://example.org/movie/1232569> owl:sameAs <http://dbpedia.org/resource/Pinocchio_Unstrung>,
+        <http://www.wikidata.org/entity/Q124317046> .
+
+<https://example.org/movie/1234821> owl:sameAs <http://dbpedia.org/resource/Jurassic_World_Rebirth>,
+        <http://www.wikidata.org/entity/Q124380480> .
+
+<https://example.org/movie/1240889> owl:sameAs <http://dbpedia.org/resource/Teenage_Sex_and_Death_at_Camp_Miasma>,
+        <http://www.wikidata.org/entity/Q134434223> .
+
+<https://example.org/movie/1273221> owl:sameAs <http://dbpedia.org/resource/Scary_Movie_(2026_film)>,
+        <http://www.wikidata.org/entity/Q131450198> .
+
+<https://example.org/movie/1275779> owl:sameAs <http://dbpedia.org/resource/Disclosure_Day>,
+        <http://www.wikidata.org/entity/Q126683577> .
+
+<https://example.org/movie/1284465> owl:sameAs <http://dbpedia.org/resource/The_Death_of_Robin_Hood>,
+        <http://www.wikidata.org/entity/Q125960231> .
+
+<https://example.org/movie/1288059> owl:sameAs <http://dbpedia.org/resource/I_Want_Your_Sex_(film)>,
+        <http://www.wikidata.org/entity/Q130646766> .
+
+<https://example.org/movie/1288445> owl:sameAs <http://dbpedia.org/resource/Mutiny_(2026_film)>,
+        <http://www.wikidata.org/entity/Q125878994> .
+
+<https://example.org/movie/1294189> owl:sameAs <http://dbpedia.org/resource/The_Mongoose_(film)>,
+        <http://www.wikidata.org/entity/Q132240256> .
+
+<https://example.org/movie/1301421> owl:sameAs <http://dbpedia.org/resource/The_Sheep_Detectives>,
+        <http://www.wikidata.org/entity/Q126405648> .
+
+<https://example.org/movie/1302904> owl:sameAs <http://dbpedia.org/resource/Practical_Magic_2>,
+        <http://www.wikidata.org/entity/Q131901398> .
+
+<https://example.org/movie/1311031> owl:sameAs <http://dbpedia.org/resource/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle>,
+        <http://www.wikidata.org/entity/Q126948105> .
+
+<https://example.org/movie/1315772> owl:sameAs <http://dbpedia.org/resource/Minions_%26_Monsters>,
+        <http://www.wikidata.org/entity/Q127605787> .
+
+<https://example.org/movie/1318467> owl:sameAs <http://dbpedia.org/resource/The_Last_Kiss_(2026_film)>,
+        <http://www.wikidata.org/entity/Q141430687> .
+
+<https://example.org/movie/1327819> owl:sameAs <http://dbpedia.org/resource/Hoppers_(film)>,
+        <http://www.wikidata.org/entity/Q128798957> .
+
+<https://example.org/movie/1339713> owl:sameAs <http://dbpedia.org/resource/Obsession_(2025_film)>,
+        <http://www.wikidata.org/entity/Q136163067> .
+
+<https://example.org/movie/1368337> owl:sameAs <http://dbpedia.org/resource/The_Odyssey_(2026_film)>,
+        <http://www.wikidata.org/entity/Q131547207> .
+
+<https://example.org/movie/1375646> owl:sameAs <http://dbpedia.org/resource/Colony_(2026_film)>,
+        <http://www.wikidata.org/entity/Q134285034> .
+
+<https://example.org/movie/1377237> owl:sameAs <http://dbpedia.org/resource/Runner_(2026_American_film)>,
+        <http://www.wikidata.org/entity/Q133809675> .
+
+<https://example.org/movie/1386315> owl:sameAs <http://dbpedia.org/resource/The_Runner_(2026_film)>,
+        <http://www.wikidata.org/entity/Q134107888> .
+
+<https://example.org/movie/1393326> owl:sameAs <http://dbpedia.org/resource/Ghost_in_the_Cell>,
+        <http://www.wikidata.org/entity/Q135472680> .
+
+<https://example.org/movie/1408162> owl:sameAs <http://dbpedia.org/resource/Vishwanath_%26_Sons>,
+        <http://www.wikidata.org/entity/Q135094933> .
+
+<https://example.org/movie/1419406> owl:sameAs <http://dbpedia.org/resource/The_Shadow's_Edge>,
+        <http://www.wikidata.org/entity/Q135919148> .
+
+<https://example.org/movie/1423191> owl:sameAs <http://dbpedia.org/resource/Resident_Evil_(2026_film)>,
+        <http://www.wikidata.org/entity/Q136565785> .
+
+<https://example.org/movie/1440098> owl:sameAs <http://dbpedia.org/resource/Drawn_Together_(film)>,
+        <http://www.wikidata.org/entity/Q140958739> .
+
+<https://example.org/movie/1514682> owl:sameAs <http://dbpedia.org/resource/Above_%26_Below>,
+        <http://www.wikidata.org/entity/Q140484495> .
+
+<https://example.org/movie/1514863> owl:sameAs <http://dbpedia.org/resource/Best_of_the_Best_(2026_film)>,
+        <http://www.wikidata.org/entity/Q141520590> .
+
+<https://example.org/movie/1516698> owl:sameAs <http://dbpedia.org/resource/The_Last_Sunrise>,
+        <http://www.wikidata.org/entity/Q136807764> .
+
+<https://example.org/movie/155> owl:sameAs <http://dbpedia.org/resource/The_Dark_Knight>,
+        <http://www.wikidata.org/entity/Q163872> .
+
+<https://example.org/movie/157336> owl:sameAs <http://dbpedia.org/resource/Interstellar_(film)>,
+        <http://www.wikidata.org/entity/Q13417189> .
+
+<https://example.org/movie/1594914> owl:sameAs <http://dbpedia.org/resource/Lucky_Strike_(2026_film)>,
+        <http://www.wikidata.org/entity/Q140003925> .
+
+<https://example.org/movie/1621552> owl:sameAs <http://dbpedia.org/resource/Facing_El_Chapo>,
+        <http://www.wikidata.org/entity/Q141165617> .
+
+<https://example.org/movie/19995> owl:sameAs <http://dbpedia.org/resource/Avatar_(2009_film)>,
+        <http://www.wikidata.org/entity/Q24871> .
+
+<https://example.org/movie/218> owl:sameAs <http://dbpedia.org/resource/The_Terminator>,
+        <http://www.wikidata.org/entity/Q162255> .
+
+<https://example.org/movie/238> owl:sameAs <http://dbpedia.org/resource/The_Godfather>,
+        <http://www.wikidata.org/entity/Q47703> .
+
+<https://example.org/movie/24428> owl:sameAs <http://dbpedia.org/resource/The_Avengers_(2012_film)>,
+        <http://www.wikidata.org/entity/Q182218> .
+
+<https://example.org/movie/27205> owl:sameAs <http://dbpedia.org/resource/Inception>,
+        <http://www.wikidata.org/entity/Q25188> .
+
+<https://example.org/movie/278> owl:sameAs <http://dbpedia.org/resource/The_Shawshank_Redemption>,
+        <http://www.wikidata.org/entity/Q172241> .
+
+<https://example.org/movie/299534> owl:sameAs <http://dbpedia.org/resource/Avengers:_Endgame>,
+        <http://www.wikidata.org/entity/Q23781155> .
+
+<https://example.org/movie/299536> owl:sameAs <http://dbpedia.org/resource/Avengers:_Infinity_War>,
+        <http://www.wikidata.org/entity/Q23780914> .
+
+<https://example.org/movie/414906> owl:sameAs <http://dbpedia.org/resource/The_Batman_(film)>,
+        <http://www.wikidata.org/entity/Q61117344> .
+
+<https://example.org/movie/454639> owl:sameAs <http://dbpedia.org/resource/Masters_of_the_Universe_(2026_film)>,
+        <http://www.wikidata.org/entity/Q112040381> .
+
+<https://example.org/movie/460458> owl:sameAs <http://dbpedia.org/resource/Resident_Evil:_Welcome_to_Raccoon_City>,
+        <http://www.wikidata.org/entity/Q101069738> .
+
+<https://example.org/movie/533535> owl:sameAs <http://dbpedia.org/resource/Deadpool_%26_Wolverine>,
+        <http://www.wikidata.org/entity/Q102180106> .
+
+<https://example.org/movie/569094> owl:sameAs <http://dbpedia.org/resource/Spider-Man:_Across_the_Spider-Verse>,
+        <http://www.wikidata.org/entity/Q76448600> .
+
+<https://example.org/movie/603> owl:sameAs <http://dbpedia.org/resource/The_Matrix>,
+        <http://www.wikidata.org/entity/Q83495> .
+
+<https://example.org/movie/634649> owl:sameAs <http://dbpedia.org/resource/Spider-Man:_No_Way_Home>,
+        <http://www.wikidata.org/entity/Q68934496> .
+
+<https://example.org/movie/6435> owl:sameAs <http://dbpedia.org/resource/Practical_Magic>,
+        <http://www.wikidata.org/entity/Q148429> .
+
+<https://example.org/movie/671> owl:sameAs <http://dbpedia.org/resource/Harry_Potter_and_the_Philosopher's_Stone_(film)>,
+        <http://www.wikidata.org/entity/Q102438> .
+
+<https://example.org/movie/687163> owl:sameAs <http://dbpedia.org/resource/Project_Hail_Mary_(film)>,
+        <http://www.wikidata.org/entity/Q107105860> .
+
+<https://example.org/movie/693134> owl:sameAs <http://dbpedia.org/resource/Dune:_Part_Two>,
+        <http://www.wikidata.org/entity/Q109228991> .
+
+<https://example.org/movie/755898> owl:sameAs <http://dbpedia.org/resource/War_of_the_Worlds_(2025_film)>,
+        <http://www.wikidata.org/entity/Q135458343> .
+
+<https://example.org/movie/76341> owl:sameAs <http://dbpedia.org/resource/Mad_Max:_Fury_Road>,
+        <http://www.wikidata.org/entity/Q1757288> .
+
+<https://example.org/movie/813418> owl:sameAs <http://dbpedia.org/resource/Hot_Spot_(2026_film)>,
+        <http://www.wikidata.org/entity/Q138857118> .
+
+<https://example.org/movie/822119> owl:sameAs <http://dbpedia.org/resource/Captain_America:_Brave_New_World>,
+        <http://www.wikidata.org/entity/Q112322116> .
+
+<https://example.org/movie/83533> owl:sameAs <http://dbpedia.org/resource/Avatar:_Fire_and_Ash>,
+        <http://www.wikidata.org/entity/Q29580929> .
+
+<https://example.org/movie/860508> owl:sameAs <http://dbpedia.org/resource/The_Whisper_Man>,
+        <http://www.wikidata.org/entity/Q133852597> .
+
+<https://example.org/movie/872585> owl:sameAs <http://dbpedia.org/resource/Oppenheimer_(film)>,
+        <http://www.wikidata.org/entity/Q108839994> .
+
+<https://example.org/movie/936075> owl:sameAs <http://dbpedia.org/resource/Michael_(2026_film)>,
+        <http://www.wikidata.org/entity/Q116677364> .
+
+<https://example.org/movie/969681> owl:sameAs <http://dbpedia.org/resource/Spider-Man:_Brand_New_Day>,
+        <http://www.wikidata.org/entity/Q113244935> .
+
+<https://example.org/movie/980431> owl:sameAs <http://dbpedia.org/resource/Avatar_Aang:_The_Last_Airbender>,
+        <http://www.wikidata.org/entity/Q125447555> .
+
+#################################################################
+# Manually approved
+#################################################################
+
+<https://example.org/movie/1228834> owl:sameAs <http://www.wikidata.org/entity/Q130367869> .
+
+<https://example.org/movie/1506560> owl:sameAs <http://www.wikidata.org/entity/Q140670111>
+
+<https://example.org/movie/1560520> owl:sameAs <http://www.wikidata.org/entity/Q141503933>
+
+<https://example.org/movie/1641629> owl:sameAs <http://www.wikidata.org/entity/Q140465273>
+
+<https://example.org/movie/1656489> owl:sameAs <http://www.wikidata.org/entity/Q141491417>
+
+<https://example.org/movie/264980> owl:sameAs <http://www.wikidata.org/entity/Q1169889>
