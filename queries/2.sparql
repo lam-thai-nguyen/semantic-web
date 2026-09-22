@@ -1,9 +1,9 @@
-# List 20 actors
+# List 20 people
 
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?person_id ?person_name 
+SELECT DISTINCT *
 WHERE {
   ?person_id a schema:Person .
   ?person_id schema:name ?person_name .

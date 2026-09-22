@@ -4,7 +4,7 @@ PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?movie_name ?genre ?date ?actor_name
+SELECT DISTINCT ?movie_name ?genre ?date ?actor_name (?r AS ?rating_value) (?rc AS ?rating_count)
 WHERE {
     ?id a schema:Movie .
     ?id schema:name ?movie_name .
@@ -14,8 +14,12 @@ WHERE {
     ?id schema:actor ?a .
     ?a schema:actor ?actor_id .
     ?actor_id schema:name ?actor_name .
+    ?id schema:aggregateRating ?rating .
+    ?rating schema:ratingValue ?r .
+    ?rating schema:ratingCount ?rc .
     FILTER (?genre = "Action")
     FILTER (?date >= "2020-01-01"^^xsd:date)
     FILTER (?actor_name = "Tom Holland")
 }
+ORDER BY DESC(?r)
 LIMIT 20

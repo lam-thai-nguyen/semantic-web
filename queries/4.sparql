@@ -3,7 +3,7 @@
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?movie_name ?actor_name
+SELECT DISTINCT *
 WHERE {
   ?movie_id a schema:Movie .
   ?movie_id schema:name ?movie_name .

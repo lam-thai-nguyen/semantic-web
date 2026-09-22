@@ -3,7 +3,7 @@
 PREFIX schema: <https://schema.org/>
 PREFIX kg: <https://example.org/ontology/>
 
-SELECT ?movie ?title
+SELECT *
 WHERE {
     <https://example.org/person/525> kg:directedMovie ?movie .
     ?movie schema:name ?title .

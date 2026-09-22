@@ -3,7 +3,7 @@
 PREFIX schema: <https://schema.org/>
 PREFIX kg: <https://example.org/ontology/>
 
-SELECT ?country ?name
+SELECT *
 WHERE {
     <https://example.org/movie/299534> kg:productionCountry ?country .
     ?country schema:name ?name .

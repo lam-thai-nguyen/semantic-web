@@ -86,7 +86,7 @@ python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wiki
 | File (queries/) | Target question | Requires Deduction | KG Expressiveness |
 | :---: | --- | :---: | :---: |
 | 1.sparql | List 20 movies | o | ⭐ |
-| 2.sparql | List 20 actors | o | ⭐ |
+| 2.sparql | List 20 people | o | ⭐ |
 | 3.sparql | List 20 directors | o | ⭐ |
 | 4.sparql | List 5 actors for "Spider-Man: Brand New Day" the movie | o | ⭐ |
 | 5.sparql | What is the basic information of "The Odyssey" the movie? | o | ⭐ |
