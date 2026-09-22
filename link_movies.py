@@ -117,13 +117,21 @@ def release_year(value: str | None) -> str | None:
         return value[:4]
 
 def score_candidate(movie: dict[str, str | None], candidate: dict[str, str]) -> tuple[float, str]:
-    matched_by = []
+    identifier_matches = []
     if movie["tmdb_id"] and candidate.get("tmdb") == movie["tmdb_id"]:
-        matched_by.append("tmdb_id")
+        identifier_matches.append("tmdb_id")
     if movie["imdb_id"] and candidate.get("imdb") == movie["imdb_id"]:
-        matched_by.append("imdb_id")
-    if matched_by:
-        return 1.0, "+".join(matched_by)  # score, match method
+        identifier_matches.append("imdb_id")
+    if identifier_matches:
+        local_year = release_year(movie["release_date"])
+        wikidata_year = release_year(candidate.get("releaseDate"))
+        if local_year and wikidata_year and local_year == wikidata_year:
+            return 1.0, "+".join(identifier_matches + ["release_year"])
+        if local_year and wikidata_year and local_year != wikidata_year:
+            return 0.0, "+".join(identifier_matches + ["release_year_mismatch"])
+        return 0.5, "+".join(identifier_matches + ["release_year_missing"])
+
+    matched_by = []
     if movie["title"].casefold() == candidate.get("itemLabel", "").casefold():
         matched_by.append("title")
     if release_year(movie["release_date"]) == release_year(candidate.get("releaseDate")):
@@ -150,13 +158,25 @@ def link_movies(input_path: Path, candidates_path: Path, links_path: Path, delay
             candidates = title_date_candidates(movie["title"], movie["release_date"], session)
             search_method = "title+release_year"
 
-        unique_candidates = {candidate["item"]: candidate for candidate in candidates}
+        unique_candidates = {}
+        local_year = release_year(movie["release_date"])
+        for candidate in candidates:
+            current = unique_candidates.get(candidate["item"])
+            candidate_year_matches = local_year and local_year == release_year(candidate.get("releaseDate"))
+            current_year_matches = current and local_year == release_year(current.get("releaseDate"))
+            if current is None or (candidate_year_matches and not current_year_matches):
+                unique_candidates[candidate["item"]] = candidate
         for candidate in unique_candidates.values():
             # candidate: {'item': '...', 'tmdb': '...', 'imdb': '...', 'releaseDate': '...', 'itemLabel': '...'}
             score, matched_by = score_candidate(movie, candidate)
             wikidata = candidate["item"]
             dbpedia = dbpedia_uri(wikidata, session)
-            status = "approved" if score == 1.0 and dbpedia else "review"
+            if score == 1.0 and dbpedia:
+                status = "approved"
+            elif "release_year_mismatch" in matched_by:
+                status = "rejected"
+            else:
+                status = "review"
             candidate_rows.append(
                 {
                     "local_uri": movie["local_uri"],
