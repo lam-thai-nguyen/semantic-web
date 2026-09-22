@@ -73,3 +73,4 @@ python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wiki
 | 12.sparql | Which country is this movie's production company from? | x | ⭐⭐⭐ |
 | 13.sparql | Does this movie have two different IMDb pages? | x | ⭐⭐⭐ |
 | 14.sparql | Do these two movies share an IMDb page? | x | ⭐⭐⭐ |
+| 15.sparql | What do we know about Tom Holland other sources (DBpedia or Wikidata)? | o | ⭐⭐⭐⭐ |
