@@ -100,3 +100,19 @@ python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wiki
 | 13.sparql | Does this movie have two different IMDb pages? | x | ⭐⭐⭐ |
 | 14.sparql | Do these two movies share an IMDb page? | x | ⭐⭐⭐ |
 | 15.sparql | What do we know about "The Odyssey" the movie from other sources (DBpedia or Wikidata)? | o | ⭐⭐⭐⭐ |
+
+## Set up a SPARQL endpoint with Fuseki
+
+Visit https://jena.apache.org/download/, download a file called `apache-jena-fuseki-6.2.0.zip`. Unzip it to `apache-jena-fuseki-6.2.0/`. Copy its absolute path and run:
+
+```powershell
+java --version  # Java 17+ is required
+cd "<absolute path>"
+fuseki-server
+```
+
+Go to `localhost:3030` via your browser. In the Fuseki UI, create a new dataset, upload dataset, and start querying.
+
+![alt text](fuseki.gif)
+
+⚠️ Fuseki doesn't have a reasoner by default, so you can only use queries from 1 through 10 in `queries/`. For reasoning, query via CLI instead.
