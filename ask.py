@@ -1,6 +1,7 @@
 import argparse
 import re
 import time
+from urllib.error import HTTPError
 
 from owlrl import DeductiveClosure, OWLRL_Semantics
 from rdflib import OWL, Graph
@@ -91,8 +92,22 @@ def main():
             headers=REMOTE_HEADERS,
         )
     )
-    print_rdflib_results(remote_graph.query(remote_query))
+    print(f"[remote] Waiting 2 seconds before querying {args.target}...")
+    time.sleep(2)
 
+    try:
+        print_rdflib_results(remote_graph.query(remote_query))
+    except HTTPError as error:
+        if error.code == 429:
+            print("[remote] Rate limit reached. Please wait and try again later.")
+            return
+        raise
+    except ValueError as error:
+        underlying_error = error.__cause__ or error.__context__
+        if isinstance(underlying_error, HTTPError) and underlying_error.code == 429:
+            print("[remote] Rate limit reached. Please wait and try again later.")
+            return
+        raise
 
 if __name__ == "__main__":
     start = time.time()
