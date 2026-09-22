@@ -14,6 +14,8 @@ conda activate semantic-web
 pip install -r requirements.txt
 ```
 
+I use Windows 11 btw!
+
 ## Collect data from TMDB
 
 Get an API Key from https://www.themoviedb.org/, then store it as an environment variable. On Windows Powershell, run:
