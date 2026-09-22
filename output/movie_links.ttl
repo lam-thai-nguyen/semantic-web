@@ -253,12 +253,12 @@
 
 <https://example.org/movie/1228834> owl:sameAs <http://www.wikidata.org/entity/Q130367869> .
 
-<https://example.org/movie/1506560> owl:sameAs <http://www.wikidata.org/entity/Q140670111>
+<https://example.org/movie/1506560> owl:sameAs <http://www.wikidata.org/entity/Q140670111> .
 
-<https://example.org/movie/1560520> owl:sameAs <http://www.wikidata.org/entity/Q141503933>
+<https://example.org/movie/1560520> owl:sameAs <http://www.wikidata.org/entity/Q141503933> .
 
-<https://example.org/movie/1641629> owl:sameAs <http://www.wikidata.org/entity/Q140465273>
+<https://example.org/movie/1641629> owl:sameAs <http://www.wikidata.org/entity/Q140465273> .
 
-<https://example.org/movie/1656489> owl:sameAs <http://www.wikidata.org/entity/Q141491417>
+<https://example.org/movie/1656489> owl:sameAs <http://www.wikidata.org/entity/Q141491417> .
 
-<https://example.org/movie/264980> owl:sameAs <http://www.wikidata.org/entity/Q1169889>
+<https://example.org/movie/264980> owl:sameAs <http://www.wikidata.org/entity/Q1169889> .
