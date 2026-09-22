@@ -54,7 +54,7 @@ Output: `./ontology.owl` (manually written)
 Linking mechanism:
 - Criteria: IMDB id, TMDB id, title, release year
 - Scoring:
-  - Automatically approved (1.0 point): (1) matches imdb, tmdb and year, and (2) can retrieve DBpedia URI
+  - Automatically approved: (1) matches imdb, tmdb and year, and (2) can retrieve DBpedia URI
   - Rejected: due to year mismatch
   - Needs review: remaining cases
 
