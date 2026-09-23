@@ -75,11 +75,11 @@ Output:
 After generating `output/movies.ttl` and building `./ontology.owl`, you can run a SPARQL query from the provided example `queries/`
 
 ```bash
-python ask.py -q queries/1.sparql --no-reasoning  # for Q1 -> Q10
-python ask.py -q queries/11.sparql  # for Q11 -> Q14
+python ask.py -q "queries/1.sparql" --no-reasoning  # for Q1 -> Q10
+python ask.py -q "queries/11.sparql"  # for Q11 -> Q14
 python ask.py --rdf "output/inferred_graph.ttl" -q "queries/11.sparql" --no-reasoning  # for Q11 -> Q14 (faster)
-python ask.py -q queries/15.sparql  --target dbpedia --no-reasoning  # for DBpedia remote querying
-python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wikidata remote querying
+python ask.py -q "queries/15.sparql" --target dbpedia --no-reasoning  # for DBpedia remote querying
+python ask.py -q "queries/15.sparql" --target wikidata --no-reasoning  # for Wikidata remote querying
 ```
 
 ⚠️ Known issue: Wikidata rate limit is expected.
