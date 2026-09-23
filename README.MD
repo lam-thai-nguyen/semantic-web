@@ -116,4 +116,4 @@ Go to `localhost:3030` via your browser. In the Fuseki UI, create a new dataset,
 
 ![alt text](fuseki.gif)
 
-⚠️ Fuseki doesn't have a reasoner by default, so load an inferred graph (like `output/inferred_graph.ttl`) instead of the raw RDF file (like `output/movies.ttl`).
+⚠️ Fuseki doesn't have a reasoner by default, so load an inferred graph (like `output/inferred_graph_clean.ttl`) instead of the raw RDF file (like `output/movies.ttl`).
