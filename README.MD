@@ -77,6 +77,7 @@ After generating `output/movies.ttl` and building `./ontology.owl`, you can run 
 ```bash
 python ask.py -q queries/1.sparql --no-reasoning  # for Q1 -> Q10
 python ask.py -q queries/11.sparql  # for Q11 -> Q14
+python ask.py --rdf "output/inferred_graph.ttl" -q "queries/11.sparql" --no-reasoning  # for Q11 -> Q14 (faster)
 python ask.py -q queries/15.sparql  --target dbpedia --no-reasoning  # for DBpedia remote querying
 python ask.py -q queries/15.sparql  --target wikidata --no-reasoning  # for Wikidata remote querying
 ```
@@ -115,4 +116,4 @@ Go to `localhost:3030` via your browser. In the Fuseki UI, create a new dataset,
 
 ![alt text](fuseki.gif)
 
-⚠️ Fuseki doesn't have a reasoner by default, so you can only use queries from 1 through 10 in `queries/`. For reasoning, query via CLI instead.
+⚠️ Fuseki doesn't have a reasoner by default, so load an inferred graph (like `output/inferred_graph.ttl`) instead of the raw RDF file (like `output/movies.ttl`).
